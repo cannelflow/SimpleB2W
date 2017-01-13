@@ -1,5 +1,8 @@
 <?php
 
+//add support for post thumbnail
+add_theme_support( 'post-thumbnails' );
+
 function simpleb2w_scripts() {
 	
 	wp_enqueue_style( 'bootstrap-styles', get_template_directory_uri() . '/css/bootstrap.min.css', array(), '3.3.7', 'all' );
