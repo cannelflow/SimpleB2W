@@ -25,9 +25,12 @@
                 </div>
             </div>
             <div class="row">
+                    <?php
+                      $i = 1;
+                     ?>
                 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
                     <div class="col-sm-4 portfolio-item">
-                      <a href="#portfolioModal1" class="portfolio-link" data-toggle="modal">
+                      <a href="#portfolioModal<?php echo $i ; ?>" class="portfolio-link" data-toggle="modal">
                         <div class="caption">
                             <div class="caption-content">
                                 <i class="fa fa-search-plus fa-3x"></i>
@@ -41,59 +44,10 @@
                         <!--<img src="<?php echo get_template_directory_uri() ; ?>/img/portfolio/cabin.png" class="img-responsive" alt="">-->
                       </a>
                     </div>
+                    <?php echo $i++ ; ?>
                 <?php endwhile; else : ?>
 	            <p><?php _e( 'Sorry, no posts matched your criteria.' ); ?></p>
                 <?php endif; ?>
-                <!--<div class="col-sm-4 portfolio-item">-->
-                <!--    <a href="#portfolioModal2" class="portfolio-link" data-toggle="modal">-->
-                <!--        <div class="caption">-->
-                <!--            <div class="caption-content">-->
-                <!--                <i class="fa fa-search-plus fa-3x"></i>-->
-                <!--            </div>-->
-                <!--        </div>-->
-                <!--        <img src="<?php echo get_template_directory_uri() ; ?>/img/portfolio/cake.png" class="img-responsive" alt="">-->
-                <!--    </a>-->
-                <!--</div>-->
-                <!--<div class="col-sm-4 portfolio-item">-->
-                <!--    <a href="#portfolioModal3" class="portfolio-link" data-toggle="modal">-->
-                <!--        <div class="caption">-->
-                <!--            <div class="caption-content">-->
-                <!--                <i class="fa fa-search-plus fa-3x"></i>-->
-                <!--            </div>-->
-                <!--        </div>-->
-                <!--        <img src="<?php echo get_template_directory_uri() ; ?>/img/portfolio/circus.png" class="img-responsive" alt="">-->
-                <!--    </a>-->
-                <!--</div>-->
-                <!--<div class="col-sm-4 portfolio-item">-->
-                <!--    <a href="#portfolioModal4" class="portfolio-link" data-toggle="modal">-->
-                <!--        <div class="caption">-->
-                <!--            <div class="caption-content">-->
-                <!--                <i class="fa fa-search-plus fa-3x"></i>-->
-                <!--            </div>-->
-                <!--        </div>-->
-                <!--        <img src="<?php echo get_template_directory_uri() ; ?>/img/portfolio/game.png" class="img-responsive" alt="">-->
-                <!--    </a>-->
-                <!--</div>-->
-                <!--<div class="col-sm-4 portfolio-item">-->
-                <!--    <a href="#portfolioModal5" class="portfolio-link" data-toggle="modal">-->
-                <!--        <div class="caption">-->
-                <!--            <div class="caption-content">-->
-                <!--                <i class="fa fa-search-plus fa-3x"></i>-->
-                <!--            </div>-->
-                <!--        </div>-->
-                <!--        <img src="<?php echo get_template_directory_uri() ; ?>/img/portfolio/safe.png" class="img-responsive" alt="">-->
-                <!--    </a>-->
-                <!--</div>-->
-                <!--<div class="col-sm-4 portfolio-item">-->
-                <!--    <a href="#portfolioModal6" class="portfolio-link" data-toggle="modal">-->
-                <!--        <div class="caption">-->
-                <!--            <div class="caption-content">-->
-                <!--                <i class="fa fa-search-plus fa-3x"></i>-->
-                <!--            </div>-->
-                <!--        </div>-->
-                <!--        <img src="<?php echo get_template_directory_uri() ; ?>/img/portfolio/submarine.png" class="img-responsive" alt="">-->
-                <!--    </a>-->
-                <!--</div>-->
             </div>
         </div>
     </section>
