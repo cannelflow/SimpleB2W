@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Freelancer - Start Bootstrap Theme</title>
+    <title><?php bloginfo('name') ; ?></title>
 
 <?php wp_head() ; ?>
 </head>
@@ -24,7 +24,7 @@
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                     <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
                 </button>
-                <a class="navbar-brand" href="#page-top">Start Bootstrap</a>
+                <a class="navbar-brand" href="#page-top"><?php bloginfo('name') ; ?></a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
