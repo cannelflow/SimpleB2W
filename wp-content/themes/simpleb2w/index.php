@@ -25,12 +25,9 @@
                 </div>
             </div>
             <div class="row">
-                    <?php
-                      $i = 1;
-                     ?>
                 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
                     <div class="col-sm-4 portfolio-item">
-                      <a href="#portfolioModal<?php echo $i ; ?>" class="portfolio-link" data-toggle="modal">
+                      <a href="#portfolioModal1" class="portfolio-link" data-toggle="modal">
                         <div class="caption">
                             <div class="caption-content">
                                 <i class="fa fa-search-plus fa-3x"></i>
@@ -44,7 +41,6 @@
                         <!--<img src="<?php echo get_template_directory_uri() ; ?>/img/portfolio/cabin.png" class="img-responsive" alt="">-->
                       </a>
                     </div>
-                    <?php echo $i++ ; ?>
                 <?php endwhile; else : ?>
 	            <p><?php _e( 'Sorry, no posts matched your criteria.' ); ?></p>
                 <?php endif; ?>
